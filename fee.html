@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Fee Submission Form</title>
+    <link rel="stylesheet" href="fees.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Institute Fee Submission Form</h2>
+        <form id="feeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="rollnumber">Roll Number:</label>
+            <input type="text" id="rollnumber" name="rollnumber" required>
+
+            <label for="branch">Branch:</label>
+            <select id="branch" name="branch" required>
+                <option value="" selected>Select Category</option>
+                <option value="IT">IT</option>
+                <option value="CSE">CSE</option>
+                <option value="ELEX">ELEX</option>
+                <option value="MOM&SP">MOM&SP</option>
+            </select>
+
+            <label for="semesteryear">Semester & Year:</label>
+            <select id="semesteryear" name="semesteryear" required>
+                <option value="" selected>Select Category</option>
+                <option value="1sem/1year">1sem/1year</option>
+                <option value="2sem/1year">2sem/1year</option>
+                <option value="3sem(2year)">3sem/2year</option>
+                <option value="4sem/2year">4sem/2year</option>
+                <option value="5sem/3year">5sem/3year</option>
+                <option value="6sem/3year">6sem/3year</option>
+            </select>
+
+            <label for="studenttype">Student Type:</label>
+            <select id="studenttype" name="studenttype" required>
+                <option value="" selected>Select Type</option>
+                <option value="DayScholar">Day Scholar</option>
+                <option value="Hosteler">Hosteler</option>
+            </select>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="" selected>Select Category</option>
+                <option value="General">General</option>
+                <option value="TFW">TFW</option>
+            </select>
+
+            <label for="totalfee">Total Fee:</label>
+            <input type="text" id="totalfee" name="totalfee" readonly>
+
+            <button type="button" id="rzp-button1">Pay Now</button>
+        </form>
+    </div>
+    <script src="./feejs.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="./razorpay.js"></script>
+</body>
+</html>
