@@ -2,7 +2,7 @@
 CREATE DATABASE fee_database;
 
 -- Create the fee_submissions table
-CREATE TABLE IF NOT EXISTS fee_submissions (
+CREATE TABLE fee_submissions (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     rollnumber VARCHAR(50) NOT NULL,
