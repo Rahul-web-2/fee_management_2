@@ -1,0 +1,16 @@
+-- Create the database
+CREATE DATABASE fee_database;
+
+-- Create the fee_submissions table
+CREATE TABLE IF NOT EXISTS fee_submissions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    rollnumber VARCHAR(50) NOT NULL,
+    semesteryear VARCHAR(50) NOT NULL,
+    studenttype ENUM('DayScholar', 'Hosteler') NOT NULL,
+    category ENUM('General', 'TFW') NOT NULL,
+    totalfee DECIMAL(10, 2) NOT NULL,
+    payment_id VARCHAR(100) NOT NULL UNIQUE,
+    branch VARCHAR(50) NOT NULL,
+    submission_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
