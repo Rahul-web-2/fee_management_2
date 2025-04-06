@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Razorpay options
         const options = {
-            key: "rzp_test_qU6Ae3Kvf2pTdp", // Replace with your Razorpay Key ID
+            key: "Razorpay Key ID", // Replace with your Razorpay Key ID
             amount: parseFloat(data.totalfee) * 100, // Convert to paise
             currency: "INR",
             name: "Institute Name",
